@@ -1,4 +1,16 @@
 table! {
+    posts (id) {
+        id -> Integer,
+        title -> Text,
+        image -> Text,
+        body -> Text,
+        summary -> Text,
+        published -> Bool,
+        published_date -> Timestamp,
+    }
+}
+
+table! {
     users (id) {
         id -> Integer,
         username -> Text,
@@ -12,3 +24,8 @@ table! {
         created_at -> Nullable<Timestamp>,
     }
 }
+
+allow_tables_to_appear_in_same_query!(
+    posts,
+    users,
+);
