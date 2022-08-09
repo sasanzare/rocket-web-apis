@@ -1,3 +1,8 @@
+//add the modules
+mod api; 
+mod models;
+mod repository;
+
 #[macro_use] extern crate rocket;
 
 
