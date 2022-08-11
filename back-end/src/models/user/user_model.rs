@@ -11,7 +11,7 @@ struct Db(diesel::SqliteConnection);
 #[serde(crate = "rocket::serde")]
 #[table_name = "users"]
 pub struct User {
-    pub id:             i32,
+    pub id:             Option<i32>,
     pub username:       String,
     pub first_name:     Option<String>,
     pub last_name:      Option<String>,

@@ -1,6 +1,6 @@
 table! {
     posts (id) {
-        id -> Integer,
+        id -> Nullable<Integer>,
         title -> Text,
         img -> Text,
         body -> Text,
@@ -12,7 +12,7 @@ table! {
 
 table! {
     users (id) {
-        id -> Integer,
+        id -> Nullable<Integer>,
         username -> Text,
         first_name -> Nullable<Text>,
         last_name -> Nullable<Text>,
