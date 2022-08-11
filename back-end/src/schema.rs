@@ -2,11 +2,11 @@ table! {
     posts (id) {
         id -> Integer,
         title -> Text,
-        image -> Text,
+        img -> Text,
         body -> Text,
         summary -> Text,
         published -> Bool,
-        published_date -> Timestamp,
+        created_at -> Timestamp,
     }
 }
 
@@ -21,7 +21,7 @@ table! {
         is_staff -> Bool,
         is_active -> Bool,
         is_superuser -> Bool,
-        created_at -> Nullable<Timestamp>,
+        created_at -> Timestamp,
     }
 }
 

@@ -1,10 +1,10 @@
 -- Your SQL goes here
 CREATE TABLE posts (
-    id INT(11) NOT NULL PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     title NVARCHAR NOT NULL,
-    image TEXT NOT NULl,
+    img TEXT NOT NULl,
     body TEXT NOT NULl,
     summary TEXT NOT NULl,
-    published BOOLEAN NOT NULL,
-    published_date TIMESTAMP NOT NULL
+    published BOOLEAN NOT NULL DEFAULT 0 CHECK(published IN (0,1)),
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
